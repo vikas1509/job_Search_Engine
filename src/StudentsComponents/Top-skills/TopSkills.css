@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+  
+    height: 100vh;
+    margin: 0;
+    
+
+  }
+  
+  .container {
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #5b4df2;
+    margin-bottom: 1em;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+  }
+  
+  .skill-item input[type="checkbox"] {
+    margin-right: 0.5em;
+  }
+  
+  .skill-item label {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .submit-btn {
+    background: #5b4df2;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1em;
+  }
+  
+  .submit-btn:hover {
+    background: #3e34a6;
+  }
+  
+  .submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn-wrapper {
+    position: fixed;
+    top: 500px;
+    right: 600px;
+  }
+  

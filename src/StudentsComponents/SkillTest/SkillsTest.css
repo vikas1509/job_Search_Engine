@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Primary Background Color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    min-height: 100vh; /* Allow for content to be taller than the viewport */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #5b4df2; /* Important Blue Color */
+}
+
+.question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    margin: 10px 0;
+}
+
+.options input[type="radio"] {
+    display: none;
+}
+
+.options label {
+    display: block;
+    padding: 10px;
+    background: #5b4df2; /* Important Blue Color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.options input[type="radio"]:checked + label {
+    background: #3e34a6; /* Darker Blue for Checked State */
+    transform: scale(1.05);
+}
+
+.options label:hover {
+    background: #3e34a6; /* Darker Blue for Hover */
+}
+
+.answered-questions {
+    color: #a5d6a7; /* Slightly lighter color than the submit button */
+    margin-top: 10px;
+}
+
+.submit-btn-wrapper {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: #219653;
+    transform: scale(1.05);
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

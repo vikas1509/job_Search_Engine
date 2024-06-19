@@ -1,0 +1,55 @@
+/* src/Components/ProfileBox/ProfileBox.css */
+.box-1 {
+    height: 1.8rem;
+    width: 22.187rem;
+    background-color: #FFFFFF;
+    box-shadow: 14px 27px 45px 4px #7090B033;
+    padding: .2rem 1.5rem 2.5rem 1.5rem;
+    border-radius: .875rem;
+}
+
+.box-1:hover {
+    box-shadow: 2px 2px 2px 2px #437cb633;
+}
+
+.nested-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
+    padding: .5rem;
+}
+
+.more-profiles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.position {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.175rem;
+    line-height: 1.532rem;
+    color: #1B2559;
+}
+
+.more-profiles-info {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1B2559;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.more-profile-button-1 {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.send {
+
+
+}
