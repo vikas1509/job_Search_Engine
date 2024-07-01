@@ -21,7 +21,7 @@ const ProfessionalTest = () => {
     const confirmationMessage = 'Are you sure you want to leave this page? You have unsaved changes.';
     useBlocker(confirmationMessage, true);
     useEffect(() => {
-        // Scroll to top when the component mounts
+        // Scroll to top when the component mounts jhhfufbugubuhhfbufbufbf
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, []);
     useEffect(() => {
