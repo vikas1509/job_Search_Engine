@@ -1,0 +1,92 @@
+/* VerbalTest.css */
+.verbal-body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .verbal-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .verbal-title {
+    color: #5b4df2; /* Important Blue Color */
+  }
+  
+  .verbal-question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .verbal-options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .verbal-options li {
+    margin: 10px 0;
+  }
+  
+  .verbal-options input[type="radio"] {
+    display: none;
+  }
+  
+  .verbal-options label {
+    display: block;
+    padding: 10px;
+    background: #5b4df2; /* Important Blue Color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .verbal-options input[type="radio"]:checked + label {
+    background: #3e34a6; /* Darker Blue for Checked State */
+    transform: scale(1.05);
+  }
+  
+  .verbal-options label:hover {
+    background: #3e34a6; /* Darker Blue for Hover */
+  }
+  
+  .verbal-submit-btn-wrapper {
+   
+  }
+  
+  .verbal-submit-btn {
+    background: #27ae60; /* Green Shade */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .verbal-answered-questions {
+    color: #a5d6a7; /* Slightly lighter color than the submit button */
+    margin-top: 10px;
+  }
+  
+  .verbal-submit-btn:hover {
+    background: #219653; /* Darker Green Shade for Hover */
+    transform: scale(1.05);
+  }
+  
+  .verbal-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  

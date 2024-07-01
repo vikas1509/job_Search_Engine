@@ -1,75 +1,78 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Primary Background Color */
+    background-color: #ffffff; 
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the top */
-    min-height: 100vh; /* Allow for content to be taller than the viewport */
+    align-items: flex-start; 
+   
     margin: 0;
     padding: 20px;
 }
 
-.container {
+.skillsTestContainer {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
     padding: 20px;
     text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    min-height: 100vh; 
 }
 
-h1 {
-    color: #5b4df2; /* Important Blue Color */
+.skillsTestHeading {
+    color: #5b4df2;
 }
 
-.question {
+.skillsTestQuestion {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
 }
 
-.options {
+.skillsTestOptions {
     list-style-type: none;
     padding: 0;
 }
 
-.options li {
+.skillsTestOptions li {
     margin: 10px 0;
 }
 
-.options input[type="radio"] {
+.skillsTestOptions input[type="radio"] {
     display: none;
 }
 
-.options label {
+.skillsTestOptions label {
     display: block;
     padding: 10px;
-    background: #5b4df2; /* Important Blue Color */
+    background: #5b4df2;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
 }
 
-.options input[type="radio"]:checked + label {
-    background: #3e34a6; /* Darker Blue for Checked State */
+.skillsTestOptions input[type="radio"]:checked + label {
+    background: #3e34a6;
     transform: scale(1.05);
 }
 
-.options label:hover {
-    background: #3e34a6; /* Darker Blue for Hover */
+.skillsTestOptions label:hover {
+    background: #3e34a6;
 }
 
-.answered-questions {
-    color: #a5d6a7; /* Slightly lighter color than the submit button */
+.skillsTestAnsweredQuestions {
+    color: #a5d6a7;
     margin-top: 10px;
 }
 
-.submit-btn-wrapper {
+.skillsTestSubmitBtnWrapper {
     margin-top: 20px;
 }
 
-.submit-btn {
+.skillsTestSubmitBtn {
     background: #27ae60;
     color: white;
     border: none;
@@ -79,17 +82,17 @@ h1 {
     transition: background 0.3s, transform 0.3s;
 }
 
-.submit-btn:hover {
+.skillsTestSubmitBtn:hover {
     background: #219653;
     transform: scale(1.05);
 }
 
-#error {
+.skillsTestError {
     color: red;
     margin-top: 10px;
 }
 
-.submit-btn:disabled {
+.skillsTestSubmitBtn:disabled {
     background: #ccc;
     cursor: not-allowed;
 }

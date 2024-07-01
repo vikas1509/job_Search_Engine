@@ -1,9 +1,10 @@
 import React from 'react';
+import './Loader.css';
 
-const Loader = ({ loading }) => {
+const Loader = () => {
   return (
-    <div id="loader" style={{ display: loading ? 'block' : 'none' }}>
-      Loading...
+    <div className="loader-container">
+      <div className="loader"></div>
     </div>
   );
 };

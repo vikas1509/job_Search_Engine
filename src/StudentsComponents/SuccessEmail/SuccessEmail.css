@@ -1,8 +1,8 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Primary Color */
+    background-color: #ffffff; 
     color: #333;
   }
   
@@ -12,7 +12,7 @@ body {
   }
   
   h1 {
-    color: #5b4df2; /* Important Blue Color */
+    color: #5b4df2; 
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -29,13 +29,48 @@ body {
   }
   
   .inbox-link {
-    color: #5b4df2; /* Important Blue Color */
+    color: #5b4df2; 
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
   }
   
   .inbox-link:hover {
-    color: #3e34a6; /* Darker Blue for Hover */
+    color: #3e34a6; 
+  }
+   */
+
+
+   .successEmailContainer {
+    text-align: center;
+    margin-top: 20vh;
+  }
+  
+  .successEmailHeading {
+    color: #5b4df2;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .successEmailHeading:hover {
+    transform: rotate(5deg);
+  }
+  
+  .successEmailText {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .successEmailLink {
+    color: #5b4df2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .successEmailLink:hover {
+    color: #3e34a6;
   }
   

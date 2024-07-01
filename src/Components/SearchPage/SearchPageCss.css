@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+  
+  .content.blurred {
+    filter: blur(2px);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
+
 .right {
     width: 100%;
     height: 100%;
@@ -68,15 +76,18 @@
 }
 
 .input-fields {
-    width: 90%;
-    outline: none;
+       width: 90%;
+outline: none;
+
     border: none;
+
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #1B2559;
     font-size: 1rem;
     line-height: 1.4rem;
+   
 }
 
 .image-send {
@@ -97,6 +108,25 @@
     height: 100vh;
 }
 
+.take-test-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #5b4df2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2; /* Ensure the button is on top */
+  }
+  .take-test-button:hover {
+    background-color: #3e34a6;
+  }
+
+
+
 @media (max-width: 768px) {
     .box {
         width: 90%;
@@ -110,3 +140,7 @@
         align-items: center;
     }
 }
+
+
+
+

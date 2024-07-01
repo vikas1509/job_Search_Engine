@@ -2,14 +2,28 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Proficiency.css';
 import DataContext from '../../context/DataContext';
 import { useNavigate } from 'react-router-dom';
+import FullScreenContext from '../../FullscreenContext/FullScreenContext';
+import useBeforeUnload from '../useBeforeUnload/useBeforeUnload';
+import useBlocker from '../useBlocker/useBlocker';
+import Loader from '../../Components/Loader/Loader';
+
 const Proficiency = () => {
   const { selectedSkills, user } = useContext(DataContext);
+  const { enterFullScreen } = useContext(FullScreenContext);
   const [proficiencies, setProficiencies] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const hasUnsavedChanges = Object.values(proficiencies).some(value => value !== 2);
+  const confirmationMessage = 'Are you sure you want to leave this page? You have unsaved changes.';
+
+  useBeforeUnload('Are you sure you want to leave? Changes you made may not be saved.');
+  useBlocker(confirmationMessage, true);
   useEffect(() => {
-    // Initialize proficiencies state with default values
+    // Scroll to top when the component mounts
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  useEffect(() => {
     if (selectedSkills && selectedSkills.length > 0) {
       const initialProficiencies = {};
       selectedSkills.forEach(skill => {
@@ -51,10 +65,11 @@ const Proficiency = () => {
         method: 'POST',
         body: formData,
       });
+      const result = await response.json();
 
       if (response.ok) {
         navigate('/SuccesEmail');
-        alert('Proficiencies submitted successfully.');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         alert('Failed to submit proficiencies.');
       }
@@ -67,24 +82,24 @@ const Proficiency = () => {
   };
 
   return (
-    <div className="container">
-      <h2>How good are you in:</h2>
+    <div className="proficiencyContainer">
+      <h2 className="proficiencyHeading">How good are you in:</h2>
       <form onSubmit={handleSubmit}>
         {selectedSkills && selectedSkills.length > 0 ? (
           selectedSkills.map((skill, index) => (
             <div key={index}>
-              <div className="slider-label">{skill}</div>
+              <div className="proficiencySliderLabel">{skill}</div>
               <input
                 type="range"
                 min="0"
                 max="5"
                 value={proficiencies[skill] || 2}
-                className="slider"
+                className="proficiencySlider"
                 id={`slider${index}`}
                 name={skill}
                 onChange={(e) => handleProficiencyChange(skill, e.target.value)}
               />
-              <div className="values">
+              <div className="proficiencyValues">
                 <span>0</span>
                 <span>1</span>
                 <span>2</span>
@@ -98,15 +113,15 @@ const Proficiency = () => {
           <p>Loading skills...</p>
         )}
         <input type="hidden" name="default_value" value={user} />
-        <div className="submit-btn-wrapper">
-          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+        <div className="proficiencySubmitBtnWrapper">
+          <button type="submit" className="proficiencySubmitBtn" disabled={isSubmitting}>
             Submit
           </button>
         </div>
-        {errorMessage && <p id="errorMessage" className="error-message">{errorMessage}</p>}
+        {errorMessage && <p id="errorMessage" className="proficiencyErrorMessage">{errorMessage}</p>}
       </form>
-      {isSubmitting && <div className="blur" id="blur"></div>}
-      {isSubmitting && <div className="loader" id="loader"></div>}
+    
+      {isSubmitting && <div className="proficiencyLoader" id="loader"><Loader /></div>}
     </div>
   );
 };

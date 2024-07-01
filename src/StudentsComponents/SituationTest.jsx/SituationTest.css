@@ -1,0 +1,102 @@
+/* SituationTest.css */
+.situation-body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .situation-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .situation-title {
+    color: #5b4df2;
+  }
+  
+  .situation-passage {
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .situation-question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .situation-options {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .situation-options li {
+    margin: 10px 0;
+  }
+  
+  .situation-options input[type="radio"] {
+    display: none;
+  }
+  
+  .situation-options label {
+    display: block;
+    padding: 10px;
+    background: #5b4df2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .situation-options input[type="radio"]:checked + label {
+    background: #3e34a6;
+    transform: scale(1.05);
+  }
+  
+  .situation-options label:hover {
+    background: #3e34a6;
+  }
+  
+  .situation-submit-btn-wrapper {
+    
+  }
+  
+  .situation-submit-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .situation-answered-questions {
+    color: #a5d6a7;
+    margin-top: 10px;
+  }
+  
+  .situation-submit-btn:hover {
+    background: #219653;
+    transform: scale(1.05);
+  }
+  
+  .situation-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  

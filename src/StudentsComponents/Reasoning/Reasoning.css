@@ -1,0 +1,91 @@
+/* Reasoning.css */
+.reasoningBody {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.reasoningContainer {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.reasoningTitle {
+    color: #5b4df2; /* Important Blue Color */
+}
+
+.reasoningQuestion {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reasoningOptions {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reasoningOptions li {
+    margin: 10px 0;
+}
+
+.reasoningOptions input[type="radio"] {
+    display: none;
+}
+
+.reasoningOptions label {
+    display: block;
+    padding: 10px;
+    background: #5b4df2; /* Important Blue Color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.reasoningOptions input[type="radio"]:checked + label {
+    background: #3e34a6; /* Darker Blue for Checked State */
+    transform: scale(1.05);
+}
+
+.reasoningOptions label:hover {
+    background: #3e34a6; /* Darker Blue for Hover */
+}
+
+.reasoningSubmitBtnWrapper {
+
+}
+
+.reasoningAnsweredQuestions {
+    color: #a5d6a7; /* Slightly lighter color than the submit button */
+    margin-top: 10px;
+}
+
+.reasoningSubmitBtn {
+    background: #27ae60; /* Green Shade */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.reasoningSubmitBtn:hover {
+    background: #219653; /* Darker Green Shade for Hover */
+    transform: scale(1.05);
+}
+
+.reasoningSubmitBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

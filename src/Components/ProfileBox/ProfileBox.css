@@ -6,6 +6,7 @@
     box-shadow: 14px 27px 45px 4px #7090B033;
     padding: .2rem 1.5rem 2.5rem 1.5rem;
     border-radius: .875rem;
+    cursor: pointer;
 }
 
 .box-1:hover {
